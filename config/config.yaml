@@ -1,0 +1,329 @@
+#config_version=6
+
+hardware:
+  platform: p_roc
+  driverboards: sternWhitestar
+
+p_roc:
+  debug: true
+  use_watchdog: true
+  watchdog_time: 1s
+
+switches:
+  s_left_flipper:
+    number: SD1
+    type: NO
+    tags: left_flipper
+  s_right_flipper:
+    number: SD3
+    type: NO 
+    tags: right_flipper
+  s_upper_flipper:
+    number: SD5
+    tags: upper:flipper   
+  s_left_flipper_eos:
+    number: SD2
+    type: NC
+  s_righ_flipper_eos:
+    number: SD4
+    type: NC
+  s_trough1:
+    number: s11
+  s_trough2:
+    number: s12
+  s_trough3:
+    number: s13
+  s_trough4:
+    number: s14
+  s_trough_vuk:
+    number: s15
+    type: NO
+  s_shooter_lane: 
+    number: s16
+    type: NO
+  s_left_ramp_enter:
+    number: s18
+    type: NO
+  s_left_ramp_exit:
+    number: s19
+    type: NO
+  s_center_ramp_enter:
+    number: s20
+    type: NO
+  s_ramp_center_exit:
+    number: s21
+    type: NO
+  s_ramp_right:enter:
+    number: s22
+    type: NO
+  s_ramp_right_exit:
+    number: s23
+    type: NO
+    tags: playfield_active
+  s_super_jackpot_su:
+    number: s24
+    type: NO
+  s_mini_loop:
+    number: s25
+    type: NO
+  s_center_ramp_su:
+    number: s27
+    type: NO
+  s_righ_rsmp_su_left:
+    number: s28
+    type: NO
+  s_right_rsmp_su_right:
+    number: s29
+    type:  NO
+  s_left_top_lane:
+    number: s30
+    type: NO
+  s_middle_top_lane: 
+    number: s31
+    type: NO
+  s_right_top_lane:
+    number: s32 
+    type: NO
+  s_area51_3bank_top: 
+    number: s33
+    type: NO
+  s_area51_3bank_mid:
+    number: s34
+    type: NO
+  s_hurryup_3bank_top:
+    number: s35
+    type: NO
+  s_hurryup_3bank_mid:
+    number: s36
+    type: NO
+  s_left_orbit_bottom:
+    number: s37
+    type: NO
+  s_left:orbit_top:
+    number: s38
+    type: NO
+  s_right_orbit_top:
+    number: s39
+    type: NO
+  s_right_orbit_bottom:
+    number: s40
+    type: NO
+  s_super_vuk_enterside:
+    number: s41
+    type: NO
+  s_alien_head_opto:
+    number: s42
+    type: NO
+  s_head_entertrough_rear:
+    number: s43
+    type: NO
+  s_super_vuk:
+    number: s44
+    type: NO
+  s_super_vuk_enterfront:
+    number: s45
+    type: NO
+  s_head_endertrough_front:
+    number: s46
+    type: NO
+  s_area51_3bank_bot:
+    number: s47
+    type: NO
+  s_hurryup_3bank_bot:
+    number: s48
+    type: NO
+  s_left_turbo_bumper:
+    number: s49
+    type: NO
+  s_bottom_turbo_bumper:
+    number: s50
+    type: NO
+  s_right_turbo_bumper:
+    number: s51
+    type: NO
+  s_servo_open_close:
+    number: s52
+    type: NO
+  s_launch_button:
+    number: s53
+    type: NO
+  s_start_button:
+    number: s54
+    type: NO
+    tags: start
+  s_slam_tilt_coin_door:
+    number: s55
+    type: NO
+  s_plumb_bob:
+    number: s56
+    type: NO
+  s_left_outlsne:
+    number: s57
+    type: NO
+  s_left_return_lane:
+    number: s58
+    type: NO
+  s_left_slingshot:
+    number: s59
+    type: NO
+  s_right_outlane:
+    number: s60
+    type: NO
+  s_right:return_lane:
+    number: s61
+    type: NO
+  s_right_slingshot:
+    number: s62
+    type: NO
+  
+
+coils:
+  c_trough_eject:
+    number: c01
+    default_pulse_ms: 20
+  c_auto__launch:
+    number: c02
+    default_pulse_ms: 20
+  c_super_vuk:
+    number: c03
+    default_pulse_ms: 20
+  c_flasher_bottom:
+    number: c06
+    default_pulse_ms: 05
+  c_flash_right_Ramp:
+    number: c07
+    default_pulse_ms: 05
+  c_left_turbo_bumper:
+    number: c09 
+    default_pulse_ms: 40
+  c_bottom_turbo_bumper:
+    number: c10
+    default_pulse_ms: 40
+  c_right_turbo_bumper:
+    number: c11
+    default_pulse_ms: 40
+  c_left_slighshot:
+    number: c12
+    default_pulse_ms: 40
+  c_right_slingshot:
+    number: c13
+    default_pulse_ms: 40  
+  c_trough_release:
+    number: c17
+    default_pulse_ms: 150
+  c_left_control_gate: 
+    number: c19
+    default_pulse_ms: 20
+  c_right_control_gate:
+    number: c20
+    default_pulse_ms: 20
+  c_flipper_left:
+    number: c15
+    allow_enable: true
+    default_hold_power: 0.050
+    default_pulse_ms: 40
+  c_flipper_right:
+    number: c16
+    allow_enable: true
+    default_hold_power: 0.050
+    default_pulse_ms: 40
+  c_upper_flipper:
+    number: c14
+    allow_enable: true
+    default_hold_power: 0.050
+    default_pulse_ms: 40
+                
+      
+
+ball_devices:
+  bd_drain:
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4
+    eject_coil: c_trough_release
+    eject_coil_jam_pulse: 80ms
+    debug: true
+    eject_targets: bd_trough
+    tags: trough
+  bd_trough:
+    ball_switches: s_trough_vuk
+    tags: troughc_left_slighshot
+    eject_coil: c_trough_eject
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+  bd_plunger: 
+    ball_switches: s_shooter_lane
+    eject_coil: c_auto__launch
+    mechanical_eject: true
+    eject_timeouts: 3s
+  bd_vuk: 
+    ball_switches: s_super_vuk
+    eject_coil: c_super_vuk
+    eject_coil_jam_pulse: 30ms
+    eject_timeouts: 3s
+
+    
+
+
+
+playfields:
+  playfield: 
+    tags: default
+    default_source_device: bd_plunger    
+
+
+displays:
+ wiondow:
+    width: 800
+    height: 600
+
+slides:
+  welcome_slide:
+    widgets:
+      - type: text
+        text: PINBALL!
+        font_size: 50
+        color: red
+      - type: rectangle
+        width: 240
+        height: 60
+  attract_started:
+    widgets:
+      - text: ATTRACT MODE
+        type: text
+
+slide_player:
+  init_done: welcome_slide
+  mode_attract_started: attract_started
+  ball_started:
+    widgets:
+      type: text
+      text: PLAYER (number) BALL (ball)
+
+
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left
+    activation_switch: s_left_flipper
+  right_flipper:
+    main_coil: c_flipper_right
+    activation_switch: s_right_flipper
+  upper_flipper: 
+    activation_switch: s_upper_flipper    
+    main_coil: c_upper_flipper
+
+
+autofire_coils:
+  ac_pop_bumper_upper:
+    coil: c_bottom_turbo_bumper
+    switch: s_bottom_turbo_bumper
+  ac_pop_bumper_left:
+    coil: c_left_turbo_bumper
+    switch: s_left_turbo_bumper
+  ac_pop_bumper_right:  
+    coil: c_right_turbo_bumper
+    switch: s_right_turbo_bumper
+  ac_right_slingshot:
+    coil: c_right_slingshot
+    switch: s_right_slingshot
+  ac_left_slingshot:
+    coil: c_left_slighshot
+    switch: s_left_slingshot
