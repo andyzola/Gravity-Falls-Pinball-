@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cs3x6k1l5kt6l"]
+
+[node name="Attract" type="Node3D" unique_id=355105401]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2057846082]
+offset_right = 1280.0
+offset_bottom = 1020.0
+scale = Vector2(1.5797575, 1.0130273)
+color = Color(0.48321062, 0.9766683, 0.90910685, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=509919172]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2.2999058, 6.30277)
+theme_override_font_sizes/font_size = 100
+text = "gravity falls "
+horizontal_alignment = 1
+vertical_alignment = 1
