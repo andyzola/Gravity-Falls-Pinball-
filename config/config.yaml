@@ -244,10 +244,11 @@ ball_devices:
     tags: trough
   bd_trough:
     ball_switches: s_trough_vuk
-    tags: troughc_left_slighshot
+    tags: trough, home, drain
     eject_coil: c_trough_eject
     eject_coil_jam_pulse: 15ms
     eject_targets: bd_plunger
+    
   bd_plunger: 
     ball_switches: s_shooter_lane
     eject_coil: c_auto__launch
@@ -273,12 +274,15 @@ flippers:
   left_flipper:
     main_coil: c_flipper_left
     activation_switch: s_left_flipper
+    enable_events: machine_reset_phase_3
   right_flipper:
     main_coil: c_flipper_right
     activation_switch: s_right_flipper
+    enable_events: machine_reset_phase_3
   upper_flipper: 
     activation_switch: s_upper_flipper    
     main_coil: c_upper_flipper
+    enable_events: machine_reset_phase_3
 
 
 autofire_coils:
