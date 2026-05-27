@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Gravity Falls Pinball"
-run/main_scene="uid://ds4gduf8660uj"
+run/main_scene="uid://cs3x6k1l5kt6l"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
