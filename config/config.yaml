@@ -301,3 +301,6 @@ autofire_coils:
   ac_left_slingshot:
     coil: c_left_slighshot
     switch: s_left_slingshot
+
+modes:
+  -  base    
